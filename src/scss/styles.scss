@@ -1,0 +1,13 @@
+@import "_responsive";
+
+h1 {
+  color: red;
+  @include responsive("iphone") {
+    color: orange;
+  }
+
+  @include responsive("tablet") {
+    color: green;
+    font-size: 2rem;
+  }
+}

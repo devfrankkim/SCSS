@@ -1,0 +1,15 @@
+$min-device-width: 375px;
+$max-device-width-iphone: 667px;
+$max-device-width-tablet: 812px;
+
+@mixin responsive($device) {
+  @if $device == "iphone" {
+    @media only screen and (min-device-width: $min-device-width) and (max-device-width: $max-device-width-iphone) and (-webkit-min-device-pixel-ratio: 2) {
+      @content;
+    }
+  } @else if $device == "tablet" {
+    @media only screen and (min-device-width: $min-device-width) and (max-device-width: $max-device-width-tablet) and (-webkit-min-device-pixel-ratio: 3) {
+      @content;
+    }
+  }
+}
